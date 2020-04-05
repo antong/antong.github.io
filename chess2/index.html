@@ -74,6 +74,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				onSnapEnd: onSnapEnd,
 				draggable: true
 			});
+			jQuery('#board').on('scroll touchmove touchend touchstart contextmenu', function(e){
+				e.preventDefault();
+			});
 			board.start();
 			board.clear(true);
 			fen = chassm.init();
